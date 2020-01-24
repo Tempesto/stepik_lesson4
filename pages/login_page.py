@@ -9,8 +9,10 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        assert self.browser.current_url == "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/", \
-            "Current url is not"
+        url_login = self.browser.current_url
+        if "login" in url_login:
+            login = "login"
+        assert login == "login", "Current url is not"
         assert True
 
     def should_be_login_form(self):
