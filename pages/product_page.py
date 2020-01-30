@@ -21,3 +21,10 @@ class ProductPage(BasePage):
 
     def get_price_of_product(self):
         return self.browser.find_element(*ProductPageLocator.GET_PRICE_OF_PRODUCT_LINK).text
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocator.GET_ALERT_ABOUT_PROTUCT_ADD_TO_BASKET), \
+            "Success message is presented, but should not be"
+
+    def should_not_be_success_message(self):
+        assert self.is_disappeared(*ProductPageLocator.GET_ALERT_ABOUT_PROTUCT_ADD_TO_BASKET), ""
