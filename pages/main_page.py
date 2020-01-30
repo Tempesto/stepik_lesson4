@@ -1,5 +1,5 @@
 from .base_page import BasePage
-from .locators import MainPageLocators
+from .locators.main_page_locator import MainPageLocators
 
 
 class MainPage(BasePage):
@@ -9,6 +9,7 @@ class MainPage(BasePage):
         # return LoginPage(browser=self.browser, url=self.browser.current_url)
         # alert = self.browser.switch_to.alert
         # alert.accept()
+        return MainPage
 
-    def should_be_login_link(self):
-        assert self.is_element_present(*MainPageLocators.LOGIN_LINK), "Login link is not presented"
+    def get_be_login_link(self):
+        return self.is_element_present(*MainPageLocators.LOGIN_LINK)
