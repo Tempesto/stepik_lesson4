@@ -3,10 +3,8 @@ from .pages.login_page import LoginPage
 from .pages.product_page import ProductPage
 from .pages.basket_page import BasketPage
 import pytest
-from .pages.locators.base_page_locators import BasePageLocators
 from .pages.locators.main_page_locator import MainPageLocators
 from .pages.locators.product_page_locator import ProductPageLocator
-
 
 link = 'http://selenium1py.pythonanywhere.com/'
 link_product = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-shellcoders-handbook_209/"

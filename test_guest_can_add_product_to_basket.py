@@ -20,7 +20,6 @@ def test_guest_can_add_product_to_basket(browser, link):
     print("prod_name = ", prod_name, " alert name = ", alert_text)
     assert prod_name == alert_text, "The product that was added to the cart does not match the message about adding to " \
                                     "the cart."
-    # time.sleep(15)
     page.click_to_basket()
     basket_page = BasketPage(browser, browser.current_url)
     prod_price_in_basket = basket_page.find_element_product_in_basket(prod_name, 4, "p")
